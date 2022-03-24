@@ -36,21 +36,4 @@ void build() {
 }
 ```
 
-## 查询
-```cpp
-int query(string s) {
-    int now = 0, ans = 0;
-    for (int i = 0;i < s.length();i++) {
-        now = tr[now][s[i] - 'a'];
-        for (int j = now;j&&End[j]!=j;j = fail[j]) ans += End[j], End[j] = -1;
-        // it has appeared, so it doesn't count again. 
-    }
-    return ans;
-}
-```
-
-
-
-
-
 
